@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bitwise Operator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: rgb(2,0,36);
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+		}
+		.heading {
+			background-color: rgba(100, 150, 150, 0.7);
+    		padding: 10px;
+    		text-align: center;
+
+		}
+		.content-box {
+			max-width: 800px;
+            margin: 10px auto;
+            padding: 26px;
+            background-color: rgba(200, 255, 255, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+
+		}
+		.content-box-mini {
+			max-width: 600px;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: rgba(200, 255, 255, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+		}
+		h1, h3 {
+			color: white;
+			margin: 3px;
+    		text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.6);
+		}
+		p {
+			text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+
+	<script type="text/javascript">
+		var hydrogen = 4; // Bit presentation 100
+		var oxygen = 5; // Bit presentation 101
+		var linebreak = "<br />";
+	</script>
+
+</head>
+
+<body>
+	<section class="heading">
+		<h1>Bitwise Operator  |  JavaScript</h1>
+		<h3>Web Development  |  Assignment  |  by Daniel Alzona</h3>
+	</section>
+	<div class="content-box">
+		<section class="content-box">
+			<p>Let's explore bitwise operators using the variables <strong>hydrogen</strong> 
+				as A (4 in binary: 100) and <strong>oxygen</strong> as B (5 in binary: 101):</p>
+		</section>
+		<p><strong>1. & (Bitwise AND)</strong>
+		<br>It performs a Boolean AND operation on each bit of its integer arguments.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// & (Bitwise AND)
+					document.write("(a & b) => ");
+					outcome = (hydrogen & oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 & 101 = 100");
+					document.write(linebreak, linebreak);
+					document.write("00000100");
+					document.write(linebreak);
+					document.write("00000101");
+					document.write(linebreak);
+					document.write("----------------");
+					document.write(linebreak);
+					document.write("00000100");
+					document.write(linebreak, linebreak);
+					document.write("As a result, 4 & 5 equals 00000100 in binary, which is 4 in decimal.");
+				</script>
+			</section>
+		<p><strong>2. | (BitWise OR)</strong>
+		<br>It performs a Boolean OR operation on each bit of its integer arguments.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// | (BitWise OR)
+					document.write("(a | b) => ");
+					outcome = (hydrogen | oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 | 101 = 101");
+					document.write(linebreak, linebreak);
+					document.write("00000100");
+					document.write(linebreak);
+					document.write("00000101");
+					document.write(linebreak);
+					document.write("----------------");
+					document.write(linebreak);
+					document.write("00000101");
+					document.write(linebreak, linebreak);
+					document.write("As a result, (4 | 5) equals 00000101 in binary, which is 5 in decimal.");
+				</script>
+			</section>
+		<p><strong>3. ^ (Bitwise XOR)</strong>
+		<br>It performs a Boolean exclusive OR operation on each bit of its integer arguments. Exclusive OR means that either operand one is true or operand two is true, but not both.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// ^ (Bitwise XOR)
+					document.write("(a ^ b) => ");
+					outcome = (hydrogen ^ oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 ^ 101 = 001");
+					document.write(linebreak, linebreak);
+					document.write("00000100");
+					document.write(linebreak);
+					document.write("00000101");
+					document.write(linebreak);
+					document.write("----------------");
+					document.write(linebreak);
+					document.write("00000001");
+					document.write(linebreak, linebreak);
+					document.write("As a result, (4 ^ 5) equals 00000001 in binary, which is 1 in decimal.");
+				</script>
+			</section>
+		<p><strong>4. ~ (Bitwise Not)</strong>
+		<br>It is a unary operator and operates by reversing all the bits in the operand.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// ~ (Bitwise Not)
+					document.write("(~b) => ");
+					outcome = (~oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("~101 = 11111010");
+					document.write(linebreak, linebreak);
+					document.write("Original decimal: 5");
+					document.write(linebreak, linebreak);
+					document.write("Binary representation: 00000000000000000000000000000101");
+					document.write(linebreak, linebreak);
+					document.write("Bitwise NOT: Invert each bit: 11111111111111111111111111111010");
+					document.write(linebreak, linebreak);
+					document.write("The leftmost bit 1 indicates a negative number.");
+					document.write("The magnitude of the number is 110, which is 6 in decimal.");
+					document.write(linebreak, linebreak);
+					document.write("So, ~5 in a 32-bit signed integer system is interpreted as -6 in decimal.s");
+				</script>
+			</section>
+		<p><strong>5. << (Left Shift)</strong>
+		<br>It moves all the bits in its first operand to the left by the number of places specified in the second operand. New bits are filled with zeros. Shifting a value left by one position is equivalent to multiplying it by 2, shifting two positions is equivalent to multiplying by 4, and so on.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// << (Left Shift)
+					document.write("(a << b) => ");
+					outcome = (hydrogen << oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 << 101 = 100000");
+					document.write(linebreak, linebreak);
+					document.write("Binary representation of 4 is 00000100.");
+					document.write(linebreak);
+					document.write("Left shifting 00000100 (4 in binary) by 5 positions to the left.");
+					document.write(linebreak, linebreak);
+					document.write("Shifting 00000100 left by 1 position: 00001000");
+					document.write(linebreak);
+					document.write("Shifting 00001000 left by 1 position: 00010000");
+					document.write(linebreak);
+					document.write("Shifting 00010000 left by 1 position: 00100000");
+					document.write(linebreak);
+					document.write("Shifting 00100000 left by 1 position: 01000000");
+					document.write(linebreak);
+					document.write("Shifting 01000000 left by 1 position: 10000000");
+					document.write(linebreak, linebreak);
+					document.write("As a result, 4 << 5 results in 10000000 in binary, which is 128 in decimal.");
+				</script>
+			</section>
+		<p><strong>6. >> (Right Shift)</strong>
+		<br>Binary Right Shift Operator. The left operand’s value is moved right by the number of bits specified by the right operand.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// >> (Right Shift)
+					document.write("(a >> b) => ");
+					outcome = (hydrogen >> oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 >> 101 = 0");
+					document.write(linebreak, linebreak);
+					document.write("Shifting 00000100 right by 1 position: 00000010");
+					document.write(linebreak);
+					document.write("Shifting 00000010 right by 1 position: 00000001");
+					document.write(linebreak);
+					document.write("Shifting 00000001 right by 1 position: 00000000");
+					document.write(linebreak, linebreak);
+					document.write("As a result, 4 >> 5 does result in 00000000 in binary, which is 0 in decimal.");
+				</script>
+			</section>
+		<p><strong>7. >>> (Right shift with Zero)</strong>
+		<br>This operator is just like the >> operator, except that the bits shifted in on the left are always zero.</p>
+			<section class="content-box-mini">
+				<script type="text/javascript">
+					// >>> (Right Shift with Zero)
+					document.write("(a >>> b) => ");
+					outcome = (hydrogen >>> oxygen);
+					document.write(outcome);
+					document.write(linebreak);
+					document.write("100 >>> 101 = 0");
+					document.write(linebreak, linebreak);
+					document.write("Shifting 00000100 right by 1 position: 00000010");
+					document.write(linebreak);
+					document.write("Shifting 00000010 right by 1 position: 00000001");
+					document.write(linebreak);
+					document.write("Shifting 00000001 right by 1 position: 00000000");
+					document.write(linebreak, linebreak);
+					document.write("As a result, 4 >>> 5 does result in 00000000 in binary, which is 0 in decimal.");
+				</script>
+			</section>
+	</div>
+</body>
+</html>
